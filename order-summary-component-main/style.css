@@ -1,0 +1,189 @@
+/* Remove default margin -----------------------------------------------------------------------*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    overflow: overlay;/*This is used to put the scrollbar transparent*/
+  }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/* Inherit fonts for inputs and buttons -----------------------------------------------------*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Make images easier to work with ----------------------------------------------------------*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/*----------------------specifications---------------------------------------------------*/
+
+/*----------------------CARD STARTS---------------------------------------------------*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat; /* No repit the background image*/
+    background-size: contain; /*That the img background uses the total space of the father container*/
+    font-family: 'Red Hat Display', sans-serif;
+}
+.card__main__central {
+    background-color: white;
+    width: 357px;
+    height: 520px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden; /* To hidden the overfloweed content from this div or card*/
+    font-size: 16px;
+}
+.card__content{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card__title{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 30px 0px 10px 0px;
+}
+.card__description{
+    width: 85%;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 200;
+    color: rgb(125, 132, 150);
+    padding: 10px 0px 20px 0px;
+}
+.sub__card__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+.sub__card__price:hover{
+    box-shadow: 0px 10px 10px rgb(232, 232, 232);
+}
+.img__price, .change__link {
+    padding: 0px 20px;
+}
+.price__des__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.pri__des {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.price__description_1{
+    color: rgb(0, 0, 11);
+    font-size: 12px;
+    font-weight: 700;
+}
+.price__description_2{
+    color: rgb(125, 132, 150);
+    font-size: 12px;
+}
+.img__price{
+    width: 30px;
+}
+.change__link{
+    font-size: 12px;
+    color: hsl(223, 47%, 23%);
+}
+.change__link:hover{
+    color: hsla(245, 79%, 67%, 0.979);
+}
+.container__link__payment {
+    width: 100%;
+    height: 40px;
+    background-color: hsla(245, 79%, 67%, 0.979);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    margin: 30px 0px 20px 0px;
+}
+.container__link__payment:hover{
+    box-shadow: 0px 10px 20px rgb(194, 194, 194);
+    cursor: pointer;
+}
+.container__link__cancel {
+    font-size: 11px;
+    font-weight: 700;
+}
+.container__link__cancel:hover {
+    color: hsl(245, 75%, 52%);
+    cursor: pointer;
+}
+
+.attribution {
+    display: none;
+}
+
+/* background__img__mobile */
+
+@media only screen and  (min-width:1440px){
+    .body{
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat; 
+        background-size: contain; /*That the img background uses the total space of the father container*/
+    }
+    .card__main__central {
+        width: 520px;
+        height: 580px;
+    }
+    .header__img {
+        width: 520px;
+    }
+}
